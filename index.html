@@ -1,0 +1,198 @@
+<html>
+<head>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<style type="text/css">
+body {
+  background-color: white;
+  margin: 150px auto;
+  border: 6px solid black;
+}
+.first-year {
+  background-color: black;
+  color: white;
+  width: 20%;
+  font-family: big john;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 3px;
+}
+.second-year {
+  background-color: black;
+  color: white;
+  width: 20%;
+  font-family: big john;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 3px;
+}
+.third-year {
+  background-color: black;
+  color: white;
+  width: 20%;
+  font-family: big john;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 3px;
+}
+.fourth-year {
+  background-color: black;
+  color: white;
+  width: 20%;
+  font-family: big john;
+  font-size: 16px;
+  margin: 20px auto;
+  margin-left: 100px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 3px;
+}
+</style>
+<script type="text/javascript">
+// when the user open the site, then this form of graph will show up when the window opens
+window.onload = function () {
+  var chart = new CanvasJS.Chart("chartContainer", {
+    title:{
+      text: "Gross Graduation ratio, primary, total(%)"             
+    },
+    data: [              
+    {
+      // This info for 2006 year
+      type: "splineArea",
+      dataPoints: [
+        { label: "Tunisia",  y: 0  },
+        { label: "Vanezuela, RB", y: 88.8  },
+        { label: "Uzbekistan", y: 106.3  },
+        { label: "Oman",  y: 0  },
+        { label: "Pakistan",  y: 49  }
+      ]
+    }
+    ]
+    });
+  chart.render();
+}
+
+</script>
+
+
+</head>
+
+<body>
+
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+<button class="fourth-year">2006</button> 
+<button class="first-year">2008</button>
+<button class="second-year">2010</button>
+<button class="third-year">2014</button>
+
+
+<script type="text/javascript">
+// getting the first button with class first-year
+var button1 = document.querySelector(".first-year"); 
+// getting the second button with class second-year
+var button2 = document.querySelector('.second-year');
+// getting the third button with class third-year
+var button3 = document.querySelector('.third-year');
+// getting the fourth button with class fourth-year
+var button4 = document.querySelector('.fourth-year');
+
+// adding an event listener if the user click on the first button
+button1.addEventListener('click', function(){
+    var chart = new CanvasJS.Chart("chartContainer", {
+    title:{
+      text: "Gross Graduation ratio, primary, total(%)"             
+    },
+    data: [              
+    {
+      // this info for 2008 year
+      // Change type to "doughnut", "line", "splineArea", etc.
+      type: "splineArea",
+      dataPoints: [
+        { label: "Tunisia",  y: 90.6  },
+        { label: "Vanezuela, RB", y: 92.2  },
+        { label: "Uzbekistan", y: 104.1  },
+        { label: "Oman",  y: 94.6 },
+        { label: "Pakistan",  y: 48.5  }
+      ]
+    }
+    ]
+    });
+  chart.render();
+});
+// adding an event listener if the user click on the second button
+button2.addEventListener('click', function(){
+    var chart = new CanvasJS.Chart("chartContainer", {
+    title:{
+      text: "Gross Graduation ratio, primary, total(%)"             
+    },
+    data: [              
+    {
+      // this info for 2010 year
+      type: "splineArea",
+      dataPoints: [
+        { label: "Tunisia",  y: 97.3 },
+        { label: "Vanezuela, RB", y: 97.3  },
+        { label: "Uzbekistan", y: 0 },
+        { label: "Oman",  y: 108.8 },
+        { label: "Pakistan",  y: 58.9 }
+      ]
+    }
+    ]
+    });
+  chart.render();
+});
+// adding an event listener if the user click on the third button
+button3.addEventListener('click', function(){
+    var chart = new CanvasJS.Chart("chartContainer", {
+    title:{
+      text: "Gross Graduation ratio, primary, total(%)"             
+    },
+    data: [              
+    {
+      // this info for 2014 year
+      type: "splineArea",
+      dataPoints: [
+        { label: "Tunisia",  y: 0 },
+        { label: "Vanezuela, RB", y: 91.4  },
+        { label: "Uzbekistan", y: 97.1  },
+        { label: "Oman",  y: 0 },
+        { label: "Pakistan",  y: 50.3  }
+      ]
+    }
+    ]
+    });
+  chart.render();
+});
+// adding an event listener if the user click on the fourth button
+button4.addEventListener('click', function (){
+  var chart = new CanvasJS.Chart("chartContainer", {
+    title:{
+      text: "Gross Graduation ratio, primary, total(%)"             
+    },
+    data: [              
+    {
+      // This info for 2006 year
+      type: "splineArea",
+      dataPoints: [
+        { label: "Tunisia",  y: 0  },
+        { label: "Vanezuela, RB", y: 88.8  },
+        { label: "Uzbekistan", y: 106.3  },
+        { label: "Oman",  y: 0  },
+        { label: "Pakistan",  y: 49  }
+      ]
+    }
+    ]
+    });
+  chart.render();
+});
+</script>
+
+</body>
+</html>
